@@ -1,0 +1,33 @@
+    # def train(self, generations=1000, population=100, mutation_rate=1):
+    #     """
+    #     Trains the neural network using random mutation and selection.
+    #     """
+    #     best_network = copy.deepcopy(self)
+    #     best_score = -float('inf')
+
+    #     for gen in range(generations):
+    #         networks = [copy.deepcopy(best_network) for _ in range(population)]
+            
+    #         # Mutate the population
+    #         for net in networks:
+    #             for l in range(len(net.layersW)):
+    #                 for i in range(len(net.layersW[l])):
+    #                     for j in range(len(net.layersW[l][i])):
+    #                         if random.random() < mutation_rate:
+    #                             net.layersW[l][i][j] += random.uniform(-0.5, 0.5)
+    #                     if random.random() < mutation_rate:
+    #                         net.layersB[l][i] += random.uniform(-0.5, 0.5)
+            
+    #         # Evaluate each network
+    #         for net in networks:
+    #             score = simulation.main(net)  # or self.simulateGame()
+    #             if score > best_score:
+    #                 best_score = score
+    #                 best_network = copy.deepcopy(net)
+            
+    #         print(f"Generation {gen+1}, Best score: {best_score}")
+        
+    #     # Replace current network with best one
+    #     self.layersW = best_network.layersW
+    #     self.layersB = best_network.layersB
+    #     print("Training complete! Best score:", best_score)
